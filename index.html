@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 id="greeting">Welcome!</h1>
+        <p>Do you love me? 🤗</p>
+
+        <div class="btn">
+            <a href="yes.html">Yes</a>
+            <a href="no1.html">No</a>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve the user's name from local storage
+        const userName = localStorage.getItem('userName');
+        if (userName) {
+            document.getElementById('greeting').innerText = `Hello, ${userName}!`;
+        } else {
+            // If no user name is found, redirect back to welcome page
+            window.location.href = 'welcome.html';
+        }
+    </script>
+</body>
+</html>
